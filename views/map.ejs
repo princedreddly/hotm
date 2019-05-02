@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= title %></title>
+		<link rel="stylesheet" href="/stylesheets/css/style.css" />
+		<link rel="stylesheet" href="/stylesheets/css/map.css" />
+	</head>
+	<body>
+		<h1><%= title %></h1>
+		<p>Welcome to the <%= title %></p>
+
+
+			<%= console.log(markers) %>
+
+		<div id="map"/>
+		<div id="map-filters">
+			
+		</div>
+
+		<script src="/javascripts/map/mainMap.js"></script>
+		<script
+			async
+			defer
+			src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+	</body>
+</html>
