@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/forms/migrant" method="post">
+        <div class="partes">
+            <h1>Formulario</h1>
+          </div>
+            <fieldset>
+              <legend>MIGRANT RESOURCES MAPPING</legend>
+              <p>1. Your email address: <input type="text" name="emailAddres">
+                <br>
+                <br>
+                2. Name of the Organisation/Service: <input type="text" name="organisation name">
+                <br>
+                <br>
+              </p>3. Type of Organisation/Service: <select name="tipe organisation">
+                <option selected value="Government Programme"> Government Programme
+                <option value="NGO"> NGO
+                <option value="Other (please specify)"> Other (please specify)
+                <option value="NGO with convention with Government"> NGO with convention with Government
+        
+              </select></p>
+        
+              <br>
+              <div class="container" style="max-width: 650px; min-width: 400px;">
+                <div class="card">
+                  <div class="card-body">
+                    <form id="myForm" onsubmit="return validar()">
+                      <div class="form-group">
+                        <legend>4. Brief description (max 144 characters) of the Organisation/Service:</legend>
+                        <p>This description will be immediately visible on the interactive map. In order to be effective and to
+                          best promote the organisation/service try to be clear, short, simple, like in a tweet. (This question
+                          requires at least 1 answer).</p>
+                        <label for="user">In your local language:</label>
+                        <input type="text" class="form-control" name= "descriptionlocal"><br>
+                        <label for="user">In English:</label>
+                        <input type="text" class="form-control" name="descriptionenglish"><br>
+                        <label for="user">In another language:</label>
+                        <input type="text" class="form-control" name="descriptionother">
+        
+                      </div>
+                      <br>
+                      <div class="form-group">
+                        <legend>5. Primary country of the Organisation/Service:</legend>
+                        <p>In which country(-ies) is the Organisation/Service located and active?</p>
+        
+                        <input type="checkbox" name="organisation-country"> EUROPEAN UNION - wide
+                        <input type="checkbox" name="organisation-country"> Austria
+                        <input type="checkbox" name="organisation-country">
+                        Belgium
+                        <input type="checkbox" name="organisation-country"> Bulgaria
+                        <input type="checkbox" name="organisation-country"> Croatia
+                        <input type="checkbox" name="organisation-country"> Cyprus
+                        <input type="checkbox" name="organisation-country"> Czech Republic
+                        <input type="checkbox" name="organisation-country"> Denmark
+                        <input type="checkbox" name="organisation-country"> Estonia
+                        <input type="checkbox" name="organisation-country"> Finland
+                        <input type="checkbox" name="organisation-country"> France
+                        <input type="checkbox" name="organisation-country"> Germany
+                        <input type="checkbox" name="organisation-country">
+                        Greece
+                        <input type="checkbox" name="organisation-country">
+                        Hungary
+                        <input type="checkbox" name="organisation-country">
+                        Ireland
+                        <input type="checkbox" name="organisation-country"> Other (please specify)
+                        <input type="checkbox" name="organisation-country">
+                        Italy
+                        <input type="checkbox" name="organisation-country"> Latvia
+                        <input type="checkbox" name="organisation-country"> Lithuania
+                        <input type="checkbox" name="organisation-country"> Luxembourg
+                        <input type="checkbox" name="organisation-country"> Malta
+                        <input type="checkbox" name="organisation-country"> Netherlands
+                        <input type="checkbox" name="organisation-country">
+                        Poland
+                        <input type="checkbox" name="organisation-country"> Portugal
+                        <input type="checkbox" name="organisation-country"> Romania
+                        <input type="checkbox" name="organisation-country"> Slovakia
+                        <input type="checkbox" name="organisation-country">
+                        Slovenia
+                        <input type="checkbox" name="organisation-country"> Spain
+                        <input type="checkbox" name="organisation-country"> Sweden
+                        <input type="checkbox" name="organisation-country"> United Kingdom
+                        <br>
+                        <br>
+        
+                        <legend>6. The primary target(s) of the Organisation/Service's activities is/are...</legend>
+                        <input type="checkbox" name="organisation-service">general population
+                        <input type="checkbox" name="organisation-service">general migrants
+                        <input type="checkbox" name="organisation-service">newly arrived migrants (less than 5 years)
+                        <input type="checkbox" name="organisation-service">asylum seekers
+                        <input type="checkbox" name="organisation-service">Other (please specify)
+                        <input type="checkbox" name="organisation-service">refugees
+                        <input type="checkbox" name="organisation-service">healthcare professionals (doctors, nurses...)
+                        <input type="checkbox" name="organisation-service">social care professionals
+                        <br>
+                        <br>
+                        <legend>7. If applicable: The activities of the Organisation/Service are directed to (gender)...
+                        </legend>
+                        <input type="checkbox" name="organisation-service">Female
+                        <input type="checkbox" name="organisation-service">Other (please specify)
+                        <input type="checkbox" name="organisation-service">Male
+                        <br>
+                        <br>
+                        <label>8. If applicable: The activities of the Organisation/Service are directed to (legally
+                          adults/minors)...</label>
+                        <input type="checkbox" name="organisation-servise">Adult
+                        <input type="checkbox" name="organisation-servise">Minor
+        
+        
+                        <br>
+                        <br>
+                        <label>9. Main activities of the Organisation/Service (please check max 3 answers) are...</label>
+                        <br>
+                        <input type="checkbox" name="organisation-servise">health care provider
+                        <input type="checkbox" name="organisation-servise">social care provider
+                        <input type="checkbox" name="organisation-servise">legal assistance provider
+                        <input type="checkbox" name="organisation-servise">general living information
+                        <input type="checkbox" name="organisation-servise">cultural support and social integration (e.g.
+                        mediation, translation, advising/orientation, support groups...)
+                        <input type="checkbox" name="organisation-servise">education, learning (e.g.language courses)
+                        <input type="checkbox" name="organisation-servise">recreational, cultural, sport activities
+                        <input type="checkbox" name="organisation-servise">employment and employment training services
+                        <input type="checkbox" name="organisation-servise">housing, shelter
+                        <input type="checkbox" name="organisation-servise">essential goods (food, clothes...)
+                        <input type="checkbox" name="organisation-servise">Other (please specify)
+                        <br>
+                        <br>
+                        <label>10. Are there any specific requirements to access?</label>
+                        <br>
+                        <input type="radio" name="specific requirements">Yes
+                        <input type="radio" name="specific requirements">No
+                        <br>
+                        <br>
+                        <label>11. If yes, please list the specific requirements
+                          <br>
+                          <input type="text" name="specific requirements">
+                          <br>
+                          <br>
+                          <label>12. Cost</label>
+                          <br>
+                          <input type="checkbox" name="cost">Free
+                          <input type="checkbox" name="cost">Free with application
+                          <input type="checkbox" name="cost">Other (please specify)
+                          <input type="checkbox" name="cost">Subsidised
+                          <input type="checkbox" name="cost">Charged to patient
+                          <br>
+                          <br>
+                          <label>13. Spoken languages</label>
+                          <br>
+                          <p>Which language(s) is/are used in the Organisation/Service?</p>
+                          <select>
+                            <option value="Lota">Seleccionar</option>
+                            <option value="Lota">
+                              Arabic</option>
+                            <option value="Coronel">Basque</option>
+                            <option value="concepción">Bulgarian</option>
+                            <option value="concepción">Catalan
+                            </option>
+                            <option value="concepción">Chinese
+                            </option>
+                            <option value="concepción">Croatian
+                            </option>
+                            <option value="concepción">Czech
+                            </option>
+                            <option value="concepción">Danish
+                            </option>
+                            <option value="concepción">Dutch
+                            </option>
+                            <option value="concepción">English
+                            </option>
+                            <option value="concepción">Estonian
+                            </option>
+                            <option value="concepción">Finnish
+                            </option>
+                            <option value="concepción">French
+                            </option>
+                            <option value="concepción">Galician
+                            </option>
+                            <option value="concepción">German
+                            </option>
+                            <option value="concepción">Greek
+                            </option>
+                            <option value="concepción">Hindi
+                            </option>
+                            <option value="concepción">Hungarian
+                            </option>
+                            <option value="concepción">Irish
+                            </option>
+                            <option value="concepción">Other (please specify)
+                            </option>
+                            <option value="concepción">
+                              Italian
+                            </option>
+                            <option value="concepción">Japanese
+                            </option>
+                            <option value="concepción">
+                              Korean
+                            </option>
+                            <option value="concepción">Latvian
+                            </option>
+                            <option value="concepción">
+                              Lithuanian
+                            </option>
+                            <option value="concepción">Luxembourgish
+                            </option>
+                            <option value="concepción">Maltese
+                            </option>
+                            <option value="concepción">Polish
+                            </option>
+                            <option value="concepción">Portuguese
+                            </option>
+                            <option value="concepción">Romanian
+                            </option>
+                            <option value="concepción">
+                              Russian
+                            </option>
+                            <option value="concepción">Scottish Gaelic
+        
+                            </option>
+                            <option value="concepción">Slovak
+                            </option>
+                            <option value="concepción">Slovenian
+                            </option>
+                            <option value="concepción">Spanish
+                            </option>
+                            <option value="concepción">Swedish
+                            </option>
+                            <option value="concepción">Turkish
+                            </option>
+                            <option value="concepción">
+                              Urdu
+                            </option>
+                            <option value="concepción">Welsh
+                            </option>
+                          </select>
+                          <br>
+                          <br>
+                          <label>14. Head office address and contact information:</label>
+                          <br>
+                          <div class="a">
+        
+                            Name
+                            <input type="text" name="surname"><br> Surname
+                            <input type="text"name="adress"> <br> Address
+                            <input type="text" name="adress2"><br>Address 2
+                            <input type="text" name="city"><br>City/Town
+                            <input type="text" name="province"><br>Province
+                            <input type="text"name="ZIP"><br>ZIP/Postal Code
+                            <input type="text" name="country"><br>Country
+                            <input type="text" name="email"><br>Email Address
+                            <input type="text" name="phonenumber"><br>Phone Number
+                            <input type="text">
+                            <br>
+                            <br></div>
+                          <label>15. Additional contact information
+                          </label>
+                          <br>
+                          Name
+                          <input type="text" name="surname aditional">Surname
+                          <input type="text" name="adress aditional">Address
+                          <input type="text" name="adress aditional 2">Address 2
+                          <input type="text" name="city aditional">City/Town
+                          <input type="text" name="province aditional">Province
+                          <input type="text" name="zip aditional">ZIP/Postal Code
+                          <input type="text" name="country aditional">Country
+                          <input type="text" name="email aditional">Email Address
+                          <input type="text" name="phone number aditional">Phone Number
+                          <br>
+                          <br>
+                          <label>16. Website</label>
+                          <br>
+                          <p>Copy and paste the web address of the Organisation/Service</p>
+                          <input type="text" name="website">
+                          <br>
+                          <br>
+                          <label>17. Opening hours</label>
+                          <br>
+                          <input type="text" name="opening hours">
+                          <br>
+                          <br>
+                          <label>18. Do you know about other Organisation/Service that may be relevant for the purpose of
+                            MYHEALTH project?</label>
+                          <br>
+                          <input type="radio" name="specific requirements">Yes
+                          <input type="radio" name="specific requirements">No
+                          <br>
+                          <br>
+                          <label>19. If yes, please provide other Organisation/Service contact information
+                          </label>
+                          <br>
+                          Name
+                          <input type="text" name="surnameotherservice">Surname
+                          <input type="text" name="email other service">Email
+                          <input type="text" name="phone number other service">Phone number
+                          <input type="text" name="website other service">Website
+                          <br>
+                          <br>
+        
+                          20. If you have any comment or question please feel free to write to
+                          giovanni.ragazzi@regione.emilia-romagna.it or share your thoughts/suggestions in the space below.
+                        </label><br>
+                        <br>
+                        <input type="text" name= "comment"><br>
+                        <input type="button" class="btn btn-success" value="PREV">
+                        <input type="submit" class="btn btn-danger" value="Done">
+                      </div>
+                    </form>
+</body>
+</html>
