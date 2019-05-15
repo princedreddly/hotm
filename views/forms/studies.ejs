@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/forms/studies" method="post">
+        <div class="partes">
+            <h1>Study/Project</h1>
+        </div>
+        <fieldset>
+            <legend></legend>
+
+
+            <p>1. Your email address: <input type="text" name="emailAddres">
+                <br>
+                <br>
+                2. Name of the Organisation/Service that manages the Study/Project: <input type="text" name="name">
+                <br>
+                <br>
+            </p>3. Type of Organisation/Service that manages the Study/Project:
+            <select name="organisationType">
+                <option selected value="Government Program"> Government Program
+                <option value="NGO"> NGO
+                <option value="Specify Other"> Other (please specify)
+                <option value="NGO with convention with Government"> NGO with convention with Government
+            </select></p>
+
+            <br>
+            <div class="container" style="max-width: 650px; min-width: 400px;">
+                <div class="card">
+                    <div class="card-body">
+                        <form id="myForm" onsubmit="return validar()">
+                            <div class="form-group">
+                                <br>
+                                <legend>4.Name of the Study/Project</legend>
+                                <input type="text" name="studyName">
+                                <br>
+                                <legend>5. Brief description (max 144 characters) of the Study/Project:</legend>
+                                <p>This description will be immediately visible on the interactive map. In order to be
+                                    effective and to
+                                    best promote the organisation/service try to be clear, short, simple, like in a
+                                    tweet. (This question
+                                    requires at least 1 answer).</p>
+                                <label for="user">In your local language:</label>
+                                <input type="text" class="form-control" name="descriptionlocal"><br>
+                                <label for="user">In English:</label>
+                                <input type="text" class="form-control" name="descriptionenglish"><br>
+                                <label for="user">In another language:</label>
+                                <input type="text" class="form-control" name="descriptionother">
+                                <br>
+                                <br>
+                                <label></label>
+                            </div>
+                            <br>
+                            <legend>6.The Study/Project involves...</legend>
+                            <input type="checkbox" name="organisation-country"> NGO(s)
+                            <input type="checkbox" name="organisation-country"> legal service(s)
+                            <input type="checkbox" name="organisation-country"> health care provider(s)
+                            <input type="checkbox" name="organisation-country"> cultural association(s)
+                            <input type="checkbox" name="organisation-country"> social care provider(s)
+                            <input type="checkbox" name="organisation-country"> sport associations
+                            <input type="checkbox" name="organisation-country"> educational service(s) (ex. school)
+                            <input type="text" name="involves">Other(please specify)
+
+                            <legend class="form-group">
+                                <legend>7. Primary country of the Study/Project:</legend>
+                                <p>In which country(-ies) is the Study/Project located and active?</p>
+
+                                <input type="checkbox" name="organisation-country"> EUROPEAN UNION - wide
+                                <input type="checkbox" name="organisation-country"> Austria
+                                <input type="checkbox" name="organisation-country">
+                                Belgium
+                                <input type="checkbox" name="organisation-country"> Bulgaria
+                                <input type="checkbox" name="organisation-country"> Croatia
+                                <input type="checkbox" name="organisation-country"> Cyprus
+                                <input type="checkbox" name="organisation-country"> Czech Republic
+                                <input type="checkbox" name="organisation-country"> Denmark
+                                <input type="checkbox" name="organisation-country"> Estonia
+                                <input type="checkbox" name="organisation-country"> Finland
+                                <input type="checkbox" name="organisation-country"> France
+                                <input type="checkbox" name="organisation-country"> Germany
+                                <input type="checkbox" name="organisation-country">
+                                Greece
+                                <input type="checkbox" name="organisation-country">
+                                Hungary
+                                <input type="checkbox" name="organisation-country">
+                                Ireland
+                                <input type="checkbox" name="organisation-country"> Other (please specify)
+                                <input type="checkbox" name="organisation-country">
+                                Italy
+                                <input type="checkbox" name="organisation-country"> Latvia
+                                <input type="checkbox" name="organisation-country"> Lithuania
+                                <input type="checkbox" name="organisation-country"> Luxembourg
+                                <input type="checkbox" name="organisation-country"> Malta
+                                <input type="checkbox" name="organisation-country"> Netherlands
+                                <input type="checkbox" name="organisation-country">
+                                Poland
+                                <input type="checkbox" name="organisation-country"> Portugal
+                                <input type="checkbox" name="organisation-country"> Romania
+                                <input type="checkbox" name="organisation-country"> Slovakia
+                                <input type="checkbox" name="organisation-country">
+                                Slovenia
+                                <input type="checkbox" name="organisation-country"> Spain
+                                <input type="checkbox" name="organisation-country"> Sweden
+                                <input type="checkbox" name="organisation-country"> United Kingdom
+                                <br>
+                                <br>
+                                <legend>8.The Study/Project acts at a...</legend>
+                                <input type="checkbox" name="actionLevel">neighborhood level
+                                <input type="checkbox" name="actionLevel">city level
+                                <input type="checkbox" name="actionLevel">regional level
+                                <input type="checkbox" name="actionLevel">national level
+                                <input type="checkbox" name="actionLevel">international level
+                                <input type="checkbox" name="actionLevel">Other (please specify)
+                                <input type="text" name="actionLevel" id="">
+                                <br>
+
+                                <legend>9. The primary target(s) of the Study/Projects activities is/are...</legend>
+                                <input type="checkbox" name="primaryTarget">general population
+                                <input type="checkbox" name="primaryTarget">general migrants
+                                <input type="checkbox" name="primaryTarget">newly arrived migrants (less than 5 years)
+                                <input type="checkbox" name="primaryTarget">asylum seekers
+                                <input type="checkbox" name="primaryTarget">Other (please specify)
+                                <input type="checkbox" name="primaryTarget">Refugees
+                                <input type="checkbox" name="primaryTarget">healthcare professionals (doctors,
+                                nurses...)
+                                <input type="checkbox" name="primaryTarget">social care professionals
+                                <br>
+                                <br>
+                                <legend>10. If applicable: The activities of the Organisation/Service are directed to
+                                    (gender)...
+                                </legend>
+                                <input type="checkbox" name="genderTarget">Female
+                                <input type="checkbox" name="genderTarget">Other (please specify)
+                                <input type="checkbox" name="genderTarget">Male
+                                <br>
+                                <br>
+                                <label>11. If applicable: The activities of the Organisation/Service are directed to
+                                    (legally
+                                    adults/minors)...</label>
+                                <input type="checkbox" name="ageDirected">Adult
+                                <input type="checkbox" name="ageDirected">Minor
+
+
+                                <br>
+                                <br>
+                                <label>12. Main activities of the Study/Project (please check max 3 answers)
+                                    are...</label>
+                                <br>
+                                <input type="checkbox" name="mainActivities">health care provider
+                                <input type="checkbox" name="mainActivities">social care provider
+                                <input type="checkbox" name="mainActivities">legal assistance provider
+                                <input type="checkbox" name="mainActivities">general living information
+                                <input type="checkbox" name="mainActivities">cultural support and social integration
+                                (e.g.
+                                mediation, translation, advising/orientation, support groups...)
+                                <input type="checkbox" name="mainActivities">education, learning (e.g.language courses)
+                                <input type="checkbox" name="mainActivities">recreational, cultural, sport activities
+                                <input type="checkbox" name="mainActivities">employment and employment training services
+                                <input type="checkbox" name="mainActivities">housing, shelter
+                                <input type="checkbox" name="mainActivities">essential goods (food, clothes...)
+                                <input type="checkbox" name="mainActivities">Other (please specify)
+                                <br>
+
+                                <br>
+                                <br>
+                                <label>13. Are there any specific requirements to access?:</label>
+                                <input type="checkbox" name="specificRequirement">Yes
+                                <input type="checkbox" name="specificRequirement">No
+                                <br>
+
+                                <label>14. If yes, please list the specific requirements
+                                    <br>
+                                    <input type="text" name="specific requirements">
+                                    <br>
+
+                                    <br>
+                                    <label>15. Cost for the participants</label>
+                                    <br>
+                                    <input type="checkbox" name="free">Free
+                                    <input type="checkbox" name="free with application">Free with application
+                                    <input type="checkbox" name="other">Other (please specify)
+                                    <input type="checkbox" name="Subsidized">Subsidised
+                                    <input type="checkbox" name="charged to patient">Charged to patient
+                                    <br>
+                                    <br>
+                                    <label>16. Spoken languages</label>
+                                    <br>
+                                    <p>Which language(s) is/are used in the Study/Project?</p>
+                                    <select>
+                                        <option value="language">Seleccionar</option>
+                                        <option value="language">
+                                            Arabic</option>
+                                        <option value="language">Basque</option>
+                                        <option value="language">Bulgarian</option>
+                                        <option value="language">Catalan
+                                        </option>
+                                        <option value="language">Chinese
+                                        </option>
+                                        <option value="language">Croatian
+                                        </option>
+                                        <option value="language">Czech
+                                        </option>
+                                        <option value="language">Danish
+                                        </option>
+                                        <option value="language">Dutch
+                                        </option>
+                                        <option value="language">English
+                                        </option>
+                                        <option value="language">Estonian
+                                        </option>
+                                        <option value="language">Finnish
+                                        </option>
+                                        <option value="language">French
+                                        </option>
+                                        <option value="language">Galician
+                                        </option>
+                                        <option value="language">German
+                                        </option>
+                                        <option value="language">Greek
+                                        </option>
+                                        <option value="language">Hindi
+                                        </option>
+                                        <option value="language">Hungarian
+                                        </option>
+                                        <option value="language">Irish
+                                        </option>
+                                        <option value="language">Other (please specify)
+                                        </option>
+                                        <option value="language">
+                                            Italian
+                                        </option>
+                                        <option value="language">Japanese
+                                        </option>
+                                        <option value="language">
+                                            Korean
+                                        </option>
+                                        <option value="language">Latvian
+                                        </option>
+                                        <option value="language">
+                                            Lithuanian
+                                        </option>
+                                        <option value="language">Luxembourgish
+                                        </option>
+                                        <option value="language">Maltese
+                                        </option>
+                                        <option value="language">Polish
+                                        </option>
+                                        <option value="language">Portuguese
+                                        </option>
+                                        <option value="language">Romanian
+                                        </option>
+                                        <option value="language">
+                                            Russian
+                                        </option>
+                                        <option value="language">Scottish Gaelic
+
+                                        </option>
+                                        <option value="language">Slovak
+                                        </option>
+                                        <option value="language">Slovenian
+                                        </option>
+                                        <option value="language">Spanish
+                                        </option>
+                                        <option value="language">Swedish
+                                        </option>
+                                        <option value="language">Turkish
+                                        </option>
+                                        <option value="language">
+                                            Urdu
+                                        </option>
+                                        <option value="language">Welsh
+                                        </option>
+                                    </select>
+                                    <br>
+                                    <br>
+                                    <label>17. Head office address and contact information:</label>
+                                    <br>
+                                    <div class="a">
+
+                                        Name
+                                        <input type="text" name="surname"><br> Surname
+                                        <input type="text" name="adress"> <br> Address
+                                        <input type="text" name="adress2"><br>Address 2
+                                        <input type="text" name="city"><br>City/Town
+                                        <input type="text" name="province"><br>Province
+                                        <input type="text" name="ZIP"><br>ZIP/Postal Code
+                                        <input type="text" name="country"><br>Country
+                                        <input type="text" name="email"><br>Email Address
+                                        <input type="text" name="phonenumber"><br>Phone Number
+                                        <input type="text">
+                                        <br>
+                                        <br></div>
+                                    <label>15. Additional contact information
+                                    </label>
+                                    <br>
+                                    Name
+                                    <input type="text" name="surname aditional">Surname
+                                    <input type="text" name="adress aditional">Address
+                                    <input type="text" name="adress aditional 2">Address 2
+                                    <input type="text" name="city aditional">City/Town
+                                    <input type="text" name="province aditional">Province
+                                    <input type="text" name="zip aditional">ZIP/Postal Code
+                                    <input type="text" name="country aditional">Country
+                                    <input type="text" name="email aditional">Email Address
+                                    <input type="text" name="phone number aditional">Phone Number
+                                    <br>
+                                    <br>
+                                    <label>18. Website</label>
+                                    <input type="text" name="website">
+                                    <br>
+                                    <p>Copy and paste the web address of the Organisation/Service</p>
+                                    <input type="text" name="website">
+                                    <br>
+                                    <br>
+                                    <label>19. Additional contact information
+                                    </label>
+                                    <br>
+                                    Name
+                                    <input type="text" name="surname aditional">Surname
+                                    <input type="text" name="adress aditional">Address
+                                    <input type="text" name="adress aditional 2">Address 2
+                                    <input type="text" name="city aditional">City/Town
+                                    <input type="text" name="province aditional">Province
+                                    <input type="text" name="zip aditional">ZIP/Postal Code
+                                    <input type="text" name="country aditional">Country
+                                    <input type="text" name="email aditional">Email Address
+                                    <input type="text" name="phone number aditional">Phone Number
+                                    <br>
+
+                                    <br>
+                                    <br>
+                                    <label>20.Opening hours</label>
+                                    <input type="text" name="website">
+                                    <br>
+                                    <br>
+
+                                    <label>21. Do you know about other Study/Project that may be relevant for the
+                                        purpose of
+                                        MYHEALTH project?</label>
+                                    <br>
+                                    <input type="radio" name="relevantOther">Yes
+                                    <input type="radio" name="relevantOther">No
+                                    <br>
+                                    <br>
+                                    <label>22. If yes, please provide other Study/Project contact information
+                                    </label>
+                                    <br>
+                                    Name
+                                    <input type="text" name="otherInformation">Surname
+                                    <input type="text" name="otherInformation">Email
+                                    <input type="text" name="otherInformation">Phone number
+                                    <input type="text" name="otherInformation">Website
+                                    <br>
+                                    <br>
+
+                                    23. If you have any comment or question please feel free to write to
+                                    giovanni.ragazzi@regione.emilia-romagna.it or share your thoughts/suggestions in the
+                                    space below.
+                                </label><br>
+                                <br>
+                                <input type="text" name="comment"><br>
+                                <input type="button" class="btn btn-success" value="PREV">
+                                <input type="submit" class="btn btn-danger" value="Done">
+                    </div>
+    </form>
+</body>
+
+</html>
