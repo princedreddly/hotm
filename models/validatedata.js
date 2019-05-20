@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+/*
 //para conectar con una sola base de datos, en caso de que fuesen dos tendríamos que poner mongoose.createConnection
 
 mongoose.connect('mongodb://localhost/databasename')
@@ -44,3 +45,5 @@ const studiesSchema =new mongoose.Schema({
 
 
 module.exports = mongoose.model('Thing', thingSchema);
+
+*/

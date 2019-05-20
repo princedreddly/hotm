@@ -7,292 +7,246 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Migrant Resources Mapping</title>
 </head>
-
 <body>
-  <form action="/forms/migrant" method="post">
-    <div class="partes">
-      <h1>Formulario</h1>
-    </div>
-    <fieldset>
-      <legend>MIGRANT RESOURCES MAPPING</legend>
-
-
-
+    <form action="/forms/migrant" method="post">
+      <h1>MIGRANT RESOURCES MAPPING</h1>
       <p>1. Your email address: <input type="text" name="emailAddres">
-        <br>
-        <br>
-        2. Name of the Organisation/Service: <input type="text" name="organisationName">
-        <br>
-        <br>
-      </p>3. Type of Organisation/Service:
+      <br>
+      <br>
+      2. Name of the Organisation/Service: <input type="text" name="organisationName">
+      <br>
+      <br>
+      </p>3. Type of Organisation/Service:</p>
       <select name="organisationType">
         <option selected value=""> <em>Please select a type of Organization/Service</em>
         <option value="Government Program"> Government Program
         <option value="NGO"> NGO
         <option value="Specify Other"> Other (please specify)
         <option value="NGO with convention with Government"> NGO with convention with Government
-      </select></p>
-
+      </select>
       <br>
-      <div class="container" style="max-width: 650px; min-width: 400px;">
-        <div class="card">
-          <div class="card-body">
-            <form id="myForm" onsubmit="return validar()">
-              <div class="form-group">
-                <br>
+      <br>
+      4. Brief description (max 144 characters) of the Organisation/Service:
+      <p>This description will be immediately visible on the interactive map. In order to be effective and to
+      best promote the organisation/service try to be clear, short, simple, like in a tweet. (This question
+      requires at least 1 answer).</p>
+      <p>In your local language:</p>
+      <input type="text" class="form-control" name="organizationDescriptionlocal"><br>
+      <p>In English:</p>
+      <input type="text" class="form-control" name="organizationDescriptionenglish"><br>
+      <p>In another language:</p>
+      <input type="text" class="form-control" name="organizationDescriptionother">  
+      <br>
+      <br>
+      <p>5. Primary country of the Organisation/Service</p>
+      <p>In which country(-ies) is the Organisation/Service located and active?</p>
+      <input type="checkbox" name="organisationCountry" value="europeanUnionWide"> EUROPEAN UNION - wide
+      <input type="checkbox" name="organisationCountry" value="Austria"> Austria
+      <input type="checkbox" name="organisationCountry" value="Belgium"> Belgium
+      <input type="checkbox" name="organisationCountry" value="Bulgaria"> Bulgaria
+      <input type="checkbox" name="organisationCountry" value="Croatia"> Croatia
+      <input type="checkbox" name="organisationCountry" value="Cyprus"> Cyprus
+      <input type="checkbox" name="organisationCountry" value="CzechRepublic"> Czech Republic
+      <input type="checkbox" name="organisationCountry" value="Denmark"> Denmark
+      <input type="checkbox" name="organisationCountry" value="Estonia"> Estonia
+      <input type="checkbox" name="organisationCountry" value="Finland"> Finland
+      <input type="checkbox" name="organisationCountry" value="France"> France
+      <input type="checkbox" name="organisationCountry" value="Germany"> Germany
+      <input type="checkbox" name="organisationCountry" value="Greece"> Greece
+      <input type="checkbox" name="organisationCountry" value="Hungary"> Hungary
+      <input type="checkbox" name="organisationCountry" value="Ireland"> Ireland
+      <input type="checkbox" name="organisationCountry" value="Italy"> Italy
+      <input type="checkbox" name="organisationCountry" value="Latvia"> Latvia
+      <input type="checkbox" name="organisationCountry" value="Lithuania"> Lithuania
+      <input type="checkbox" name="organisationCountry" value="Luxembourg"> Luxembourg
+      <input type="checkbox" name="organisationCountry" value="Malta"> Malta
+      <input type="checkbox" name="organisationCountry" value="Netherlands"> Netherlands
+      <input type="checkbox" name="organisationCountry" value="Poland"> Poland
+      <input type="checkbox" name="organisationCountry" value="Portugal"> Portugal
+      <input type="checkbox" name="organisationCountry" value="Romania"> Romania
+      <input type="checkbox" name="organisationCountry" value="Slovakia"> Slovakia
+      <input type="checkbox" name="organisationCountry" value="Slovenia"> Slovenia
+      <input type="checkbox" name="organisationCountry" value="Spain"> Spain
+      <input type="checkbox" name="organisationCountry" value="Sweden"> Sweden
+      <input type="checkbox" name="organisationCountry" value="UnitedKingdom"> United Kingdom
+      <input type="checkbox" name="" value=""> Other (please specify)
+      <input type="text" class="form-control" name="organisationCountry" disabled value="">
+      <br>
+      <br>
+      <p>6. The primary target(s) of the Organisation/Service's activities is/are...</p>
+      <input type="checkbox" name="primaryTarget" value="generalPopulation">general population
+      <input type="checkbox" name="primaryTarget" value="generalMigrants">general migrants
+      <input type="checkbox" name="primaryTarget" value="newlyArrivedMigrants">newly arrived migrants (less than 5 years)
+      <input type="checkbox" name="primaryTarget" value="asylumSeekers">asylum seekers
+      <input type="checkbox" name="primaryTarget" value="refugees">Refugees
+      <input type="checkbox" name="primaryTarget" value="healthcareProfessional">healthcare professionals (doctors, nurses...)
+      <input type="checkbox" name="primaryTarget" value="socialCareProfessionals">social care professionals
+      <input type="checkbox" name="primaryTarget" value="other">Other (please specify)
+      <input type="text" class="form-control" name="primaryTarget" disabled value="">
+      <br>
+      <br>
+      <p>7. If applicable: The activities of the Organisation/Service are directed to (gender)... </p>
+      <input type="checkbox" name="genderTarget" value="Female">Female
+      <input type="checkbox" name="genderTarget" value="Male">Male
+      <input type="checkbox" name="genderTarget" value="Other">Other (please specify)
+      <input type="text" class="form-control" name="genderTarget" disabled value="">
+      <br>
+      <br>
+      <label>8. If applicable: The activities of the Organisation/Service are directed to (legally
+      adults/minors)...</label>
+      <input type="checkbox" name="ageDirected" value="Adult">Adult
+      <input type="checkbox" name="ageDirected" value="Minor">Minor
+      <br>
+      <br>
+      <p>9. Main activities of the Organisation/Service (please check max 3 answers) are...</p>
+      <br>
+      <input type="checkbox" name="mainActivities" value="health Care provider">health care provider
+      <input type="checkbox" name="mainActivities" value="social care provider">social care provider
+      <input type="checkbox" name="mainActivities" value="legal assistance provider">legal assistance provider
+      <input type="checkbox" name="mainActivities" value="general living information">general living
+      information
+      <input type="checkbox" name="mainActivities" value="cultural support and social integration (e.g. mediation,
+      translation, advising/orientation, support groups...)">cultural support and social integration (e.g.
+      mediation, translation, advising/orientation, support groups...)
+      <input type="checkbox" name="mainActivities"
+      value="education, learning (e.g.language courses)">education, learning (e.g.language courses)
+      <input type="checkbox" name="mainActivities"
+      value="recreational, cultural, sport activities">recreational, cultural, sport activities
+      <input type="checkbox" name="mainActivities"
+      value="employment and employment training services">employment and employment training services
+      <input type="checkbox" name="mainActivities" value="housing, shelter">housing, shelter
+      <input type="checkbox" name="mainActivities" value="essential goods (food, clothes...)">essential goods
+      (food, clothes...)
+      <input type="checkbox" name="mainActivities" value="Other (please specify)">Other (please specify)
+      <input type="text" class="form-control" name="mainActivities" disabled value="">
+      <br>
+      <br>
+      <p>10. Are there any specific requirements to access?:</p>
+      <input type="checkbox" name="specificRequirement" value="yes">Yes
+      <input type="checkbox" name="specificRequirement" value="no">No
+      <br>
+      <br>
+      <label>11. If yes, please list the specific requirements</label>
+      <input type="text" class="form-control" name="specificRequirements" disabled value="">
+      <br>
+      <br>
+      <p>12. Cost</p>      
+      <input type="checkbox" name="cost" value="free">Free
+      <input type="checkbox" name="cost" value="freeWithApplication">Free with application                 
+      <input type="checkbox" name="cost" value="subsidised">Subsidised
+      <input type="checkbox" name="cost" value="chargedToPatient">Charged to patient
+      <input type="checkbox" name="cost" value="other">Other (please specify)
+      <input type="text" class="form-control" name="cost" disabled value="">
+      <br>
+      <br>
+      <p>13. Spoken languages</p>
+      <br>  
+      <p>Which language(s) is/are used in the Organisation/Service?</p>
+      <input type="checkbox" name="language" value="Arabic">Arabic
+      <input type="checkbox" name="language" value="Basque">Basque
+      <input type="checkbox" name="language" value="Bulgarian">Bulgarian
+    <input type="checkbox" name="language" value="Catalan">Catalan
+      <input type="checkbox" name="language" value="Chinese">Chinese
+      <input type="checkbox" name="language" value="Croatian">Croatian
+      <input type="checkbox" name="language" value="Czech">Czech
+      <input type="checkbox" name="language" value="Danish">Danish
+      <input type="checkbox" name="language" value="Dutch">Dutch
+      <input type="checkbox" name="language" value="English">English
+      <input type="checkbox" name="language" value="Estonian">Estonian
+      <input type="checkbox" name="language" value="Finnish">Finnish
+      <input type="checkbox" name="language" value="French">French
+      <input type="checkbox" name="language" value="Galician">Galician
+      <input type="checkbox" name="language" value="German">German
+      <input type="checkbox" name="language" value="Greek">Greek
+      <input type="checkbox" name="language" value="Hindi">Hindi
+      <input type="checkbox" name="language" value="Hungarian">Hungarian
+      <input type="checkbox" name="language" value="Irish">Irish
+      <input type="checkbox" name="language" value="Italian">Italian
+      <input type="checkbox" name="language" value="Japanese">Japanese
+      <input type="checkbox" name="language" value="Korean">Korean
+      <input type="checkbox" name="language" value="Latvian">Latvian
+      <input type="checkbox" name="language" value="Lithuanian">Lithuanian
+      <input type="checkbox" name="language" value="Luxembourgish">Luxembourgish
+      <input type="checkbox" name="language" value="Maltese">Maltese 
+      <input type="checkbox" name="language" value="Polish">   Polish 
+      <input type="checkbox" name="language" value="Portuguese">Portuguese
+      <input type="checkbox" name="language" value="Romanian">Romanian
+      <input type="checkbox" name="language" value="Russian">Russian
+      <input type="checkbox" name="language" value="Scottish_Gaelic">Scottish Gaelic
+      <input type="checkbox" name="language" value="Slovak"> Slovak
+      <input type="checkbox" name="language" value="Slovenian">Slovenian
+      <input type="checkbox" name="language" value="Spanish">Spanish 
+      <input type="checkbox" name="language" value="Swedish">Swedish
+      <input type="checkbox" name="language" value="Turkish">Turkish
+      <input type="checkbox" name="language" value="Urdu">Urdu 
+      <input type="checkbox" name="language" value="Welsh">Welsh
+      <input type="checkbox" name="language" value="other">Other (please specify)
+      <input type="text" class="form-control" name="language" disabled value="">
+      <br>
+      <br>
+      <p>14. Head office address and contact information:</p>
+      <br>
+      Name <input type="text" name="headOfficeName"> 
+      Surname<input type="text" name="headOfficeSurname"> 
+      Address<input type="text" name="headOfficeAdress">  
+      Address 2<input type="text" name="headOfficeAdress2">
+      City/Town<input type="text" name="headOfficeCity">
+      Province<input type="text" name="headOfficeProvince">
+      ZIP/Postal Code<input type="text" name="headOfficeZIP">
+      Country<input type="text" name="headOfficeCountry">
+      Email Address<input type="text" name="headOfficeEmail">
+      Phone Number<input type="text" name="headOfficePhoneNumber">
+      <br>
+      <br>
 
-                4. Brief description (max 144 characters) of the Organisation/Service:
-                <p>This description will be immediately visible on the interactive map. In order to be effective and to
-                  best promote the organisation/service try to be clear, short, simple, like in a tweet. (This question
-                  requires at least 1 answer).</p>
-                <label for="user">In your local language:</label>
-                <input type="text" class="form-control" name="descriptionlocal"><br>
-                <label for="user">In English:</label>
-                <input type="text" class="form-control" name="descriptionenglish"><br>
-                <label for="user">In another language:</label>
-                <input type="text" class="form-control" name="descriptionother">
-
-              </div>
-              <br>
-              <div class="form-group">
-                <br>
-                <br>
-                <p>5. Primary country of the Organisation/Service</p>
-                <p>In which country(-ies) is the Organisation/Service located and active?</p>
-
-                <input type="checkbox" name="organisationCountry" value="EUROPEAN UNION - wide"> EUROPEAN UNION - wide
-                <input type="checkbox" name="organisationCountry" value="Austria"> Austria
-                <input type="checkbox" name="organisationCountry" value="Belgium"> Belgium
-                <input type="checkbox" name="organisationCountry" value="Bulgaria"> Bulgaria
-                <input type="checkbox" name="organisationCountry" value="Croatia"> Croatia
-                <input type="checkbox" name="organisationCountry" value="Cyprus"> Cyprus
-                <input type="checkbox" name="organisationCountry" value="Czech Republic"> Czech Republic
-                <input type="checkbox" name="organisationCountry" value="Denmark"> Denmark
-                <input type="checkbox" name="organisationCountry" value="Estonia"> Estonia
-                <input type="checkbox" name="organisationCountry" value="Finland"> Finland
-                <input type="checkbox" name="organisationCountry" value="France"> France
-                <input type="checkbox" name="organisationCountry" value="Germany"> Germany
-                <input type="checkbox" name="organisationCountry" value="Greece"> Greece
-                <input type="checkbox" name="organisationCountry" value="Hungary"> Hungary
-                <input type="checkbox" name="organisationCountry" value="Ireland"> Ireland
-                <input type="checkbox" name="organisationCountry" value="Italy"> Italy
-                <input type="checkbox" name="organisationCountry" value="Latvia"> Latvia
-                <input type="checkbox" name="organisationCountry" value="Lithuania"> Lithuania
-                <input type="checkbox" name="organisationCountry" value="Luxembourg"> Luxembourg
-                <input type="checkbox" name="organisationCountry" value="Malta"> Malta
-                <input type="checkbox" name="organisationCountry" value="Netherlands"> Netherlands
-                <input type="checkbox" name="organisationCountry" value="Poland"> Poland
-                <input type="checkbox" name="organisationCountry" value="Portugal"> Portugal
-                <input type="checkbox" name="organisationCountry" value="Romania"> Romania
-                <input type="checkbox" name="organisationCountry" value="Slovakia"> Slovakia
-                <input type="checkbox" name="organisationCountry" value="Slovenia"> Slovenia
-                <input type="checkbox" name="organisationCountry" value="Spain"> Spain
-                <input type="checkbox" name="organisationCountry" value="Sweden"> Sweden
-                <input type="checkbox" name="organisationCountry" value="United Kingdom"> United Kingdom
-                <input type="checkbox" name="" value=""> Other (please specify)
-                <input type="text" class="form-control" name="organisationCountry" disabled value="">
-                <br>
-                <br>
-
-                <label>6. The primary target(s) of the Organisation/Service's activities is/are...</l>
-                <input type="checkbox" name="primaryTarget" value="general population">general population
-                <input type="checkbox" name="primaryTarget" value="general migrants">general migrants
-                <input type="checkbox" name="primaryTarget" value="newly arrived migrants (less than 5 years)">newly
-                arrived migrants (less than 5 years)
-                <input type="checkbox" name="primaryTarget" value="asylum seekers">asylum seekers
-                <input type="checkbox" name="primaryTarget" value="Refugees">Refugees
-                <input type="checkbox" name="primaryTarget"
-                  value="healthcare professionals (doctors, nurses...)">healthcare professionals (doctors, nurses...)
-                <input type="checkbox" name="primaryTarget" value="social care professionals">social care professionals
-                <input type="checkbox" name="primaryTarget" value="Other (please specify)">Other (please specify)
-                <input type="text" class="form-control" name="primaryTarget" disabled value="">
-                <br>
-                <br>
-                <p>7. If applicable: The activities of the Organisation/Service are directed to (gender)...
-                </p>
-                <input type="checkbox" name="genderTarget" value="Female">Female
-                <input type="checkbox" name="genderTarget" value="Other (please specify)">Other (please specify)
-                <input type="checkbox" name="genderTarget" value="Male">Male
-                <br>
-                <br>
-                <label>8. If applicable: The activities of the Organisation/Service are directed to (legally
-                  adults/minors)...</label>
-                <input type="checkbox" name="ageDirected" value="Adult">Adult
-                <input type="checkbox" name="ageDirected" value="Minor">Minor
-
-
-                <br>
-                <br>
-                <label>9. Main activities of the Organisation/Service (please check max 3 answers) are...</label>
-                <br>
-                <input type="checkbox" name="mainActivities" value="health care provider">health care provider
-                <input type="checkbox" name="mainActivities" value="social care provider">social care provider
-                <input type="checkbox" name="mainActivities" value="legal assistance provider">legal assistance provider
-                <input type="checkbox" name="mainActivities" value="general living information">general living
-                information
-                <input type="checkbox" name="mainActivities" value="cultural support and social integration (e.g. mediation,
-                translation, advising/orientation, support groups...)">cultural support and social integration (e.g.
-                mediation, translation, advising/orientation, support groups...)
-                <input type="checkbox" name="mainActivities"
-                  value="education, learning (e.g.language courses)">education, learning (e.g.language courses)
-                <input type="checkbox" name="mainActivities"
-                  value="recreational, cultural, sport activities">recreational, cultural, sport activities
-                <input type="checkbox" name="mainActivities"
-                  value="employment and employment training services">employment and employment training services
-                <input type="checkbox" name="mainActivities" value="housing, shelter">housing, shelter
-                <input type="checkbox" name="mainActivities" value="essential goods (food, clothes...)">essential goods
-                (food, clothes...)
-                <input type="checkbox" name="mainActivities" value="Other (please specify)">Other (please specify)
-                <input type="text" class="form-control" name="mainActivities" disabled value="">
-                <br>
-
-                <br>
-                <p>10. Are there any specific requirements to access?:</p>
-                <input type="checkbox" name="specificRequirement" value="yes">Yes
-                <input type="checkbox" name="specificRequirement" value="no">No
-                <br>
-                <br>
-                
-                <label>11. If yes, please list the specific requirements</label>
-                <input type="text" class="form-control" name="specificRequirements" disabled value="">
-
-                  <br>
-                  <br>
-                  <p>12. Cost</p>            
-                  
-      
-                  <input type="checkbox" name="cost" value="Free">Free
-                  <input type="checkbox" name="cost" value="Free with application">Free with application                 
-                  <input type="checkbox" name="cost" value="Subsidised">Subsidised
-                  <input type="checkbox" name="cost" value="Charged to patient">Charged to patient
-                  <input type="checkbox" name="cost" value="Other (please specify)">Other (please specify)
-                  <input type="text" class="form-control" name="cost" disabled value="">
-                  <br>
-                  <br>
-                  <label>13. Spoken languages</label>
-                  <br>
-                  <p>Which language(s) is/are used in the Organisation/Service?</p>
-
-
-                  Arabic<input type="checkbox" name="language" value="Arabic">
-                  Basque<input type="checkbox" name="language" value="Basque">
-                  Bulgarian<input type="checkbox" name="language" value="Bulgarian">
-                  Catalan<input type="checkbox" name="language" value="Catalan"> >
-                  Chinese<input type="checkbox" name="language" value="Chinese">
-                  Croatian<input type="checkbox" name="language" value="Croatian">
-                  Czech<input type="checkbox" name="language" value="Czech">
-                  Danish<input type="checkbox" name="language" value="Danish">
-                  Dutch<input type="checkbox" name="language" value="Dutch">
-                  English<input type="checkbox" name="language" value="English">
-                  Estonian<input type="checkbox" name="language" value="Estonian">
-                  Finnish<input type="checkbox" name="language" value="Finnish">
-                  French<input type="checkbox" name="language" value="French">
-                  Galician<input type="checkbox" name="language" value="Galician">
-                  German<input type="checkbox" name="language" value="German">
-                  Greek<input type="checkbox" name="language" value="Greek">
-                  Hindi<input type="checkbox" name="language" value="Hindi">
-                  Hungarian<input type="checkbox" name="language" value="Hungarian">
-                  Irish<input type="checkbox" name="language" value="Irish">
-                  Italian<input type="checkbox" name="language" value="Italian">
-                  Japanese<input type="checkbox" name="language" value="Japanese">
-                  Korean<input type="checkbox" name="language" value="Korean">
-                  Latvian<input type="checkbox" name="language" value="Latvian">
-                  Lithuanian<input type="checkbox" name="language" value="Lithuanian">
-                  Luxembourgish<input type="checkbox" name="language" value="Luxembourgish">
-                  Maltese <input type="checkbox" name="language" value="Maltese">
-                  Polish <input type="checkbox" name="language" value="Polish">
-                  Portuguese <input type="checkbox" name="language" value="Portuguese">
-                  Romanian <input type="checkbox" name="language" value="Romanian">
-                  Russian <input type="checkbox" name="language" value="Russian">
-                  Scottish Gaelic <input type="checkbox" name="language" value="Scottish_Gaelic">
-                  Slovak <input type="checkbox" name="language" value="Slovak">
-                  Slovenian <input type="checkbox" name="language" value="Slovenian">
-                  Spanish <input type="checkbox" name="language" value="Spanish">
-                  Swedish <input type="checkbox" name="language" value="Swedish">
-                  Turkish <input type="checkbox" name="language" value="Turkish">
-                  Urdu <input type="checkbox" name="language" value="Urdu">
-                  Welsh<input type="checkbox" name="language" value="Welsh">
-                  Other (please specify)<input type="checkbox" name="language" value="Other (please specify)">
-                  <input type="text" class="form-control" name="language" disabled value="">
-                  
-
-                  
-                  <br>
-                  <br>
-                  <p>14. Head office address and contact information:</p>
-                  <br>
-                  
-                  Name <input type="text" name="headOfficeName"> 
-                  Surname<input type="text" name="headOfficeSurname"> 
-                  Address<input type="text" name="headOfficeAdress">  
-                  Address 2<input type="text" name="headOfficeAdress2">
-                  City/Town<input type="text" name="headOfficeCity">
-                  Province<input type="text" name="headOfficeProvince">
-                  ZIP/Postal Code<input type="text" name="headOfficeZIP">
-                  Country<input type="text" name="headOfficeCountry">
-                  Email Address<input type="text" name="headOfficeEmail">
-                  Phone Number<input type="text" name="headOfficePhoneNumber">
-                    
-                    <br>
-                    <br>
-
-                  <label>15. Additional contact information
-                  </label>
-                  <br>
-                  Name<input type="text" name="aditionalContactName">
-                  Address<input type="text" name="aditionalContactAdress">
-                  Address 2<input type="text" name="aditionalContactAdress 2">
-                  City/Town<input type="text" name="aditionalContactCity/town">
-                  Province<input type="text" name="aditionalContactProvince">
-                  ZIP/Postal Code<input type="text" name="aditionalContactZip">
-                  Country<input type="text" name="aditionalContactCountry">
-                  Email Address<input type="text" name="aditionalContactEmail">
-                  Phone Number<input type="text" name="aditionalContactPhoneNumber">
-                  <br>
-                  <br>
-                  <label>16. Website</label>
-                  <input type="text" name="website">
-                  <br>
-                  <label>Copy and paste the web address of the Organisation/Service</label>
-                  <input type="text" name="website">
-                  <br>
-                  <br>
-
-                  <br>
-                  <br>
-                  <label>17.Opening hours</label>
-                  <input type="text" name="opening hours">
-                  <br>
-                  <br>
-
-                  <label>18. Do you know about other Organisation/Service that may be relevant for the purpose of
-                    MYHEALTH project?</label>
-                  <br>
-                  <input type="radio" name="relevantOther" value="yes">Yes
-                  <input type="radio" name="relevantOther" value="no">No
-                  <br>
-                  <br>
-                  <label>19. If yes, please provide other Organisation/Service contact information
-                  </label>
-                  <br>
-                  Name<input type="text" name="nameotherservice">
-                  Surname<input type="text" name="surnameotherservice">
-                  Email<input type="text" name="emailOtherService">
-                  Phone number<input type="text" name="phoneNumberOtherService">
-                  Website<input type="text" name="websiteOtherService">
-                  <br>
-                  <br>
-
-                  <label></label>20. If you have any comment or question please feel free to write to
-                  giovanni.ragazzi@regione.emilia-romagna.it or share your thoughts/suggestions in the space below.
-                </label>
-                <br>
-                <br>
-                <input type="text" name="comment"><br>
-                <input type="button" class="btn btn-success" value="PREV">
-                <input type="submit" class="btn btn-danger" value="Done">
-              </div>
-            </form>
+      <label>15. Additional contact information
+      </label>
+      <br>
+      Name<input type="text" name="aditionalContactName">
+      Address<input type="text" name="aditionalContactAdress">
+      Address 2<input type="text" name="aditionalContactAdress 2">
+      City/Town<input type="text" name="aditionalContactCity/town">
+      Province<input type="text" name="aditionalContactProvince">
+      ZIP/Postal Code<input type="text" name="aditionalContactZip">
+      Country<input type="text" name="aditionalContactCountry">
+      Email Address<input type="text" name="aditionalContactEmail">
+      Phone Number<input type="text" name="aditionalContactPhoneNumber">
+      <br>
+      <br>
+      <label>16. Website</label>
+        <br>
+      <label>Copy and paste the web address of the Organisation/Service</label>
+      <input type="text" name="website">
+      <br>
+      <br>
+      <label>17.Opening hours</label>
+      <input type="text" name="opening hours">
+      <br>
+      <br>
+      <p>18. Do you know about other Organisation/Service that may be relevant for the purpose of
+      MYHEALTH project?</p>
+      <br>
+      <input type="radio" name="relevantOther" value="yes">Yes
+      <input type="radio" name="relevantOther" value="no">No
+      <br>
+      <br>
+      <p>19. If yes, please provide other Organisation/Service contact information</p>
+      <br>
+      Name<input type="text" name="nameotherservice">
+      Surname<input type="text" name="surnameotherservice">
+      Email<input type="text" name="emailOtherService">
+      Phone number<input type="text" name="phoneNumberOtherService">
+      Website<input type="text" name="websiteOtherService">
+      <br>
+      <br>
+      <p>20. If you have any comment or question please feel free to write to
+      giovanni.ragazzi@regione.emilia-romagna.it or share your thoughts/suggestions in the space below.</p>
+      <br>
+      <br>
+      <input type="text" name="comment"><br>
+      <input type="button" class="btn btn-success" value="PREV">
+      <input type="submit" class="btn btn-danger" value="Done">    
+  </form>
 </body>
 
 </html>
