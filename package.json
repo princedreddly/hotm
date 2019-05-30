@@ -4,9 +4,9 @@
 	"private": true,
 	"scripts": {
 		"dev": "concurrently \"npm:start\" \"npm:scss\" \"npm:api-files\"",
-		"start": "nodemon ./bin/www",
 		"scss": "cd public/stylesheets/ && sass --watch scss/:css/",
-		"api-files": "http-server ./api/"
+		"api-files": "http-server ./api/",
+		"start": "nodemon ./bin/www"
 	},
 	"dependencies": {
 		"concurrently": "^4.1.0",
