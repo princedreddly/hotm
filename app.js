@@ -10,7 +10,8 @@ const Thing = require('./models/validatedata');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var formsRouter = require('./routes/forms');
-
+var markersApi = require('./api/markers');
+var getMark = require('./models/GetMapMarkers');
 
 
 var app = express();
@@ -28,6 +29,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/forms', formsRouter);
+app.use('/api/markers', markersApi);
+app.use('/api2/markers', getMark);
 
 require("./models/GetMapMarkers.js");
 

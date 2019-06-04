@@ -17,7 +17,7 @@ var fields = {
   "pais": 1,
 };
 
-
+var apple = "apple";
 
 var GetMapMarkers = function () {
 
@@ -34,6 +34,9 @@ var GetMapMarkers = function () {
       //console.log( markers );
       client.close(); //NOTE Crashes Server
 
+      apple = orange;
+      
+      fruit();
 
       return markers;
 
@@ -45,5 +48,10 @@ var GetMapMarkers = function () {
 
 
 }
+
+function fruit (){
+  console.log(apple)
+}
+
 
 module.exports = GetMapMarkers;

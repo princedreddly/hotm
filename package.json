@@ -3,26 +3,22 @@
 	"version": "0.0.0",
 	"private": true,
 	"scripts": {
-		"dev": "concurrently \"npm:start\" \"npm:scss\" \"npm:api-files\"",
-		"scss": "cd public/stylesheets/ && sass --watch scss/:css/",
-		"api-files": "http-server ./api/",
 		"start": "nodemon ./bin/www"
 	},
 	"dependencies": {
-		"concurrently": "^4.1.0",
 		"cookie-parser": "~1.4.3",
 		"debug": "~2.6.9",
-		"dotenv": "^8.0.0",
 		"ejs": "~2.5.7",
 		"express": "~4.16.0",
 		"http-errors": "~1.6.2",
-		"mongodb": "^3.2.3",
-		"mongoose": "^5.5.8",
+		"mongodb": "~3.2.3",
 		"morgan": "~1.9.0",
-		"sass": "^1.18.0"
+		"surveymonkey": "^1.1.0"
 	},
 	"main": "app.js",
-	"devDependencies": {},
+	"devDependencies": {
+		"dotenv": "~8.0.0"
+	},
 	"author": "",
 	"license": "ISC",
 	"description": ""

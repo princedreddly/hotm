@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
 /*
+const mongoose = require('mongoose');
 //para conectar con una sola base de datos, en caso de que fuesen dos tendríamos que poner mongoose.createConnection
 
 mongoose.connect('mongodb+srv://root:toor@cluster0-clvxs.gcp.mongodb.net/hotm?retryWrites=true')
