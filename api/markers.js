@@ -28,7 +28,7 @@ var GetMapMarkers = function () {
         projection: fields
       }).toArray(function (err, result) {
         if (err) throw err;
-        console.log( result );
+        //console.log( result );
         var markers = result;
         //console.log( markers );
         client.close(); //NOTE Crashes Server
@@ -39,7 +39,7 @@ var GetMapMarkers = function () {
     
 });
 
-console.log(collection)
+//console.log(collection)
 
 router.get('/', (req, res) => {
     res.send('rsm');
