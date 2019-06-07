@@ -1,0 +1,16 @@
+body {
+    background: #aeaeae;
+  }
+  
+  #filters {
+    height: 400px;
+  
+    width: 200px;
+  
+    overflow: auto;
+  }
+  
+  #filters.expanded {
+    background: blue;
+  }
+  
