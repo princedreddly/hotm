@@ -3,18 +3,17 @@
 	<head>
 		<title><%= title %></title>
 		<link rel="stylesheet" href="/stylesheets/css/style.css" />
+		<link rel="stylesheet" href="/stylesheets/css/filtrostyle.css" />
 		<link rel="stylesheet" href="/stylesheets/css/map.css" />
+
 	</head>
 	<body>
-		<%- include("navbar") %>
 		<h1><%= title %></h1>
 		<p>Welcome to the <%= title %></p>
-
-
+		
+		
+		<%- include("filtros") %>
 		<div id="map"/>
-		<div id="map-filters">
-			
-		</div>
 
 		<script src="/javascripts/map/mainMap.js"></script>
 		<script

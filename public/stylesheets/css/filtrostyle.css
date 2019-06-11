@@ -1,4 +1,14 @@
+.menuButton {
+  width: 100 px;  
+  height: 30 px;  
+  position: absolute;  
+  top: 10 px;  
+  left: 1 px;  
+}
+
+
 body {
+    display: grid;
     background: #aeaeae;
   }
   
@@ -7,10 +17,10 @@ body {
   
     width: 200px;
   
-    overflow: auto;
-  }
+    
+ }
   
   #filters.expanded {
-    background: blue;
+    background: #d2edf6;
   }
   
