@@ -1,25 +1,33 @@
 {
-	"name": "myhealth-api",
-	"version": "0.0.0",
-	"private": true,
-	"scripts": {
-		"start": "nodemon ./bin/www"
-	},
-	"dependencies": {
-		"cookie-parser": "~1.4.3",
-		"debug": "~2.6.9",
-		"ejs": "~2.5.7",
-		"express": "~4.16.0",
-		"http-errors": "~1.6.2",
-		"mongodb": "~3.2.3",
-		"morgan": "~1.9.0",
-		"surveymonkey": "^1.1.0"
-	},
-	"main": "app.js",
-	"devDependencies": {
-		"dotenv": "~8.0.0"
-	},
-	"author": "",
-	"license": "ISC",
-	"description": ""
+  "name": "myhealth-api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "mongodb": "~3.2.3",
+    "morgan": "~1.9.0",
+    "surveymonkey": "^1.1.0"
+  },
+  "main": "app.js",
+  "devDependencies": {
+    "dotenv": "~8.0.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/princedreddly/hotm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/princedreddly/hotm/issues"
+  },
+  "homepage": "https://github.com/princedreddly/hotm#readme"
 }
