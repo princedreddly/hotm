@@ -11,9 +11,10 @@
 		<h1><%= title %></h1>
 		<p>Welcome to the <%= title %></p>
 		
-		
-		<%- include("filtros") %>
-		<div id="map"/>
+		<div id="#mapContainer">
+			<%- include("filtros") %>
+			<div id="map"/>
+		</div>
 
 		<script src="/javascripts/map/mainMap.js"></script>
 		<script
