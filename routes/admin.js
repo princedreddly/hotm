@@ -18,6 +18,8 @@ router.post( '/surveys/:id', ( req, res ) => {
         res.send( surveyMonkey(a) )
 } );
 
-
+router.get( '/', ( req, res ) => {
+    res.render( 'surveyLayout' )
+} );
 
 module.exports = router;
