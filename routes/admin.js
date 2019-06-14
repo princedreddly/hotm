@@ -16,6 +16,8 @@ router.get( '/surveys/:id', ( req, res ) => {
     res.render( 'surveyLayout', {title:SurveyID} )
 } );
 
-
+router.get( '/', ( req, res ) => {
+    res.render( 'surveyLayout' )
+} );
 
 module.exports = router;

@@ -62,5 +62,15 @@ router.get( '/map', function ( req, res, next ) {
   } );
 } );
 
+router.get( '/contact', function ( req, res, next ) {
+  res.render( 'contact', {
+    title: 'Contact'
+  } );
+} );
 
+router.get( '/tutorial', function ( req, res, next ) {
+  res.render( 'tutorial', {
+    title: 'Tutorial'
+  } );
+} );
 module.exports = router;
