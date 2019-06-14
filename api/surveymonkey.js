@@ -1,7 +1,6 @@
 var SurveyMonkeyAPI = require( 'surveymonkey' ).SurveyMonkeyAPI;
 
-var accessToken = '.FCw9grlOkbYAYhHmWaQ5aFFowvHTwzNWWgCfoTlNGa7WVzkSRF2MvewJchrzAF5bfe9hNCV4sIa2QkGlFKHk6zK.BBJpbk36j.5M1e5cmhin1toFLK.7BiNCCM9bCKn';
-
+var accessToken = process.env.SurveyMonkeyAccessToken
 
 try {
     var api = new SurveyMonkeyAPI( accessToken, {

@@ -8,14 +8,12 @@ router.get( '/', ( req, res ) => {
 } );
 
 
-router.get( '/surveys', ( req, res ) => {
-    res.render( 'surveyLayout' )
-} );
 
-router.post( '/surveys/:id', ( req, res ) => {
-    a = req.params.id
-    
-        res.send( surveyMonkey(a) )
+router.get( '/surveys/:id', ( req, res ) => {
+    var SurveyID = req.params.id
+
+
+    res.render( 'surveyLayout', {title:SurveyID} )
 } );
 
 

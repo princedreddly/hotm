@@ -17,7 +17,6 @@ const fields = {
 
 let markers;
 
-var GetMapMarkers = function () {
 var collection = client.connect(async function (err) {
     collection = client.db("healthOnTheMove").collection("centros_sanitarios");
 
@@ -31,12 +30,10 @@ var collection = client.connect(async function (err) {
       //client.close(); //NOTE Crashes Server
       return markers;
     })})
-};
 
-//GetMapMarkers();
 router.get('/', (req, res) => {
-  console.log('markers');
-    res.send('markers');
+  console.log(markers);
+    res.send(markers);
 });
 
-module.exports = GetMapMarkers, router;
+module.exports = router;

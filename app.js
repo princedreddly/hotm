@@ -11,7 +11,7 @@ var usersRouter = require('./routes/users');
 var formsRouter = require('./routes/forms');
 var adminRouter = require('./routes/admin');
 var markersApi = require('./api/markers');
-var getMark = require('./models/GetMapMarkers');
+var getMark = require('./api/mongoDB');
 
 
 var app = express();
@@ -30,7 +30,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/forms', formsRouter);
 app.use('/admin', adminRouter);
-//app.use('/api/markers', markersApi);
+app.use('/api/markers', markersApi);
 app.use('/api2/markers', getMark);
 
 
