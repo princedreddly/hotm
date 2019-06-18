@@ -4,7 +4,9 @@
 		<title><%= title %></title>
 		<link rel="stylesheet" href="/stylesheets/css/style.css" />
 		<link rel="stylesheet" href="/stylesheets/css/filtrostyle.css" />
-		<link rel="stylesheet" href="/stylesheets/css/map.css" />
+        <link rel="stylesheet" href="/stylesheets/css/map.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+         
 		</head>
 	<body>
 
@@ -13,14 +15,14 @@
 	
 		<div id="#mapContainer">
 			<%- include("navbartutorial") %>
-            <div class="arrow"><span>&#8595;</span>
+            <!--<div class="arrow animated infite fadeInDown"><span>&#8595;</span>-->
+
             <div style="background-color:#d2edf6;"><p style="font-size:20%; color: grey">Utiliza los filtros para que tu búsqueda sea específica: <br> selecciona la ubicación geográfica, si quieres buscar centros de salud, de vivienda, etc</p></div>
             </div>
-            <div class="arrow2"><span>&#8595;</span>
-                <div style="background-color:#d2edf6;"><p style="font-size:20%; color: grey">Utiliza los filtros para que tu búsqueda sea específica: <br> selecciona la ubicación geográfica, si quieres buscar centros de salud, de vivienda, etc</p></div>
-                </div>
+          
 			<div id="map"/>
-		</div>
+        </div>
+       
 
 		
 
@@ -38,10 +40,6 @@
         
     }
 
-    .arrow2{
-        position:absolute;
-        z-index: 4;
-        
-    }
+    
     </style>
 </html>

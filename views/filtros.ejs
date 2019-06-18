@@ -10,6 +10,7 @@
 <body>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
         <ul>
             <h2>services</h2>
             <li><input type="checkbox" name="services" value="Salud" />Salud</li>
@@ -169,6 +170,24 @@
       <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
       
       <script>
+
+
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+
       function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
       }
