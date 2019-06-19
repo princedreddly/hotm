@@ -8,16 +8,16 @@ router.get( '/', ( req, res ) => {
 } );
 
 
-router.get( '/surveys', ( req, res ) => {
+
+router.get( '/surveys/:id', ( req, res ) => {
+    var SurveyID = req.params.id
+
+
+    res.render( 'surveyLayout', {title:SurveyID} )
+} );
+
+router.get( '/', ( req, res ) => {
     res.render( 'surveyLayout' )
 } );
-
-router.post( '/surveys/:id', ( req, res ) => {
-    a = req.params.id
-    
-        res.send( surveyMonkey(a) )
-} );
-
-
 
 module.exports = router;

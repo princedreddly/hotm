@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= title %></title>
+		<link rel="stylesheet" href="/stylesheets/css/style.css" />
+		<link rel="stylesheet" href="/stylesheets/css/filtrostyle.css" />
+        <link rel="stylesheet" href="/stylesheets/css/map.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+         
+		</head>
+	<body>
+
+		
+
+	
+		<div id="#mapContainer">
+			<%- include("navbartutorial") %>
+            <!--<div class="arrow animated infite fadeInDown"><span>&#8595;</span>-->
+
+            <div style="background-color:#d2edf6;"><p style="font-size:20%; color: grey">Utiliza los filtros para que tu búsqueda sea específica: <br> selecciona la ubicación geográfica, si quieres buscar centros de salud, de vivienda, etc</p></div>
+            </div>
+          
+			<div id="map"/>
+        </div>
+       
+
+		
+
+		<script src="/javascripts/map/mainMap.js"></script>
+		<script
+			async
+			defer
+			src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+   
+        </body>
+    <style>
+    .arrow{
+        position:absolute;
+        z-index: 1;
+        
+    }
+
+    
+    </style>
+</html>

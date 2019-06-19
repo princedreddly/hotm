@@ -1,15 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title><%= title %></title>
 </head>
+
 <body>
-    <form action="/admin/surveys/:124889031" method="post">
-    <input type="button">
-    </form>
+
+    <style>
+        .todo {
+            color: gray
+        }
+
+        .comment {
+            color: green
+        }
+
+    </style>
+
+    <h2 class="comment">//Updates database from surveymonkey</h2>
+    <input type="button" value="Update List">
+    <h3 class="comment">Temporary delete all data in Database</h3>
+    <input type="button" value="Delete Database">
+
+    <h2 class="todo">*comparar datos de survey monkey y mongo para no duplicar*</h2>
+    <h2 class="todo">*Parsear Datos para poner los nombres y propiedades nuevas*</h2>
 
 </body>
+
 </html>

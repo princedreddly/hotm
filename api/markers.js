@@ -8,9 +8,9 @@ const client = new MongoClient( uri, {
     useNewUrlParser: true
 } );
 // query only verified centers
-var query = {};
+let query = {};
 // marker data necessary for map
-var fields = {
+let fields = {
     "_id": 0,
     "lat": 1,
     "lng": 1,
@@ -18,18 +18,16 @@ var fields = {
 };
 
 
-var GetMapMarkers = function () {
-
-
-    var collection = client.connect(async function (err) {
-      collection = client.db("healthOnTheMove").collection("centros_sanitarios");
+function GetMapMarkers() {
+    let collection = client.connect(async function (err) {
+              collection = client.db("healthOnTheMove").collection("centros_sanitarios");
   
      collection.find(query, {
         projection: fields
       }).toArray(function (err, result) {
         if (err) throw err;
         //console.log( result );
-        var markers = result;
+        let markers = result;
         //console.log( markers );
         client.close(); //NOTE Crashes Server
   
@@ -41,13 +39,15 @@ var GetMapMarkers = function () {
 
 //console.log(collection)
 
-router.get('/', (req, res) => {
-    res.send('rsm');
-});
-
-
 
 }
+
+
+
+router.get('/', (req, res) => {
+    res.send('markers');
+});
+
   
 
 

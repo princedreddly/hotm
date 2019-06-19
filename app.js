@@ -11,7 +11,7 @@ var usersRouter = require('./routes/users');
 var formsRouter = require('./routes/forms');
 var adminRouter = require('./routes/admin');
 var markersApi = require('./api/markers');
-var getMark = require('./models/GetMapMarkers');
+var getMark = require('./api/mongoDB');
 
 
 var app = express();
@@ -30,7 +30,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/forms', formsRouter);
 app.use('/admin', adminRouter);
-//app.use('/api/markers', markersApi);
+app.use('/api/markers', markersApi);
 app.use('/api2/markers', getMark);
 
 
@@ -49,6 +49,19 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+// mongo db connection
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://root:toor@cluster0-clvxs.gcp.mongodb.net/test?retryWrites=true&w=majority"
+MongoClient.connect(uri, function(err, client) {
+   if(err) {
+        console.log('Error occurred while connecting to MongoDB Atlas...\n',err);
+   }
+   console.log('Connected...');
+   const collection = client.db("test").collection("test");
+   // perform actions on the collection object
+   client.close();
 });
 
 module.exports = app;

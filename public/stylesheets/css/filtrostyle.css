@@ -15,14 +15,16 @@ li{
 .sidenav {
   height: 100%;
   width: 0;
-  position: fixed;
+  position: absolute;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(255, 255, 255);
+  background-color:#d2edf6;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  overflow-y: auto;
+  
 }
 
 .sidenav a {
