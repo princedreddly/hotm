@@ -51,4 +51,17 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+// mongo db connection
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://root:toor@cluster0-clvxs.gcp.mongodb.net/test?retryWrites=true&w=majority"
+MongoClient.connect(uri, function(err, client) {
+   if(err) {
+        console.log('Error occurred while connecting to MongoDB Atlas...\n',err);
+   }
+   console.log('Connected...');
+   const collection = client.db("test").collection("test");
+   // perform actions on the collection object
+   client.close();
+});
+
 module.exports = app;

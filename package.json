@@ -12,7 +12,7 @@
     "ejs": "~2.5.7",
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
-    "mongodb": "~3.2.3",
+    "mongodb": "^3.2.7",
     "morgan": "~1.9.0",
     "surveymonkey": "^1.1.0"
   },
@@ -30,5 +30,6 @@
   "bugs": {
     "url": "https://github.com/princedreddly/hotm/issues"
   },
-  "homepage": "https://github.com/princedreddly/hotm#readme"
+  "homepage": "https://github.com/princedreddly/hotm#readme",
+  "keywords": []
 }

@@ -1,5 +1,5 @@
 body {
-    background: #fffffa;
+    background: #f3f3f3;
 }
 
 header {
@@ -50,9 +50,9 @@ section {
     padding: 20px;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:1300px) {
     header nav {
-        width: 30%;
+        width: 20%;
         height: 100%;
         margin: 0;
         position: fixed;
@@ -74,7 +74,7 @@ section {
     .menu_bar .bt-menu {
         display: block;
         padding: 20px;
-        width: 30%;
+        width: 20%;
         background: #024959;
         color: #fff;
         text-decoration: none;
