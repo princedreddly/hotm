@@ -32,7 +32,6 @@ var collection = client.connect(async function (err) {
     })})
 
 router.get('/', (req, res) => {
-  console.log(markers);
     res.send(markers);
 });
 
