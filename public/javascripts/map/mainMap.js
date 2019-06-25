@@ -112,9 +112,7 @@ function iconSelector( type ) {
 function moreInfoButton( marker ) {
     return (
         `
-        <a target="_blank" href="https:/www.google.com/maps/dir/?api=1&destination=${directions}">
-        <div title="more Information" class="markerButton" style="background:teal;">+</div>
-        </a>
+        <div title="more Information" onclick="frame()" class="markerButton" style="background:teal;">+</div>
         `
     )
 }
