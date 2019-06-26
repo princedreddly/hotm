@@ -11,9 +11,12 @@
 		</head>
 	<body>
 
-		<div id="markerInfoWindow">
+		<div id="markerInfoWindow" style="display:none;">
 			<div class="topBar">
-				<div class="backButton">*back button*</div>
+			
+				<button type ="button" onclick="hideMarkerInfo()">home</button>
+		
+
 				<h2>{{data.healthCenter}}</h2>
 			</div>
 			<div class="leftSide">
@@ -81,6 +84,7 @@
 			
 			<div id="map"/>
 		</div>
+
 
 		
 

@@ -1,20 +1,22 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-
-var valids = require('./middleware/formsValidation');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const valids = require('./middleware/formsValidation');
 const Thing = require('./models/validatedata');
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var formsRouter = require('./routes/forms');
-var adminRouter = require('./routes/admin');
-var markersApi = require('./api/markers');
-var getMark = require('./api/mongoDB');
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
+const formsRouter = require('./routes/forms');
+const adminRouter = require('./routes/admin');
+const markersApi = require('./api/markers');
+const getMark = require('./api/mongoDB');
+const markerDataHandler = require('./routes/markerData')
 
 
-var app = express();
+
+
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -27,6 +29,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/map/marker', markerDataHandler);
 app.use('/users', usersRouter);
 app.use('/forms', formsRouter);
 app.use('/admin', adminRouter);

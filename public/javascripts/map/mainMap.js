@@ -1,4 +1,14 @@
 let allMarkers = []
+const markerInfo = document.querySelector("#markerInfoWindow")
+
+function hideMarkerInfo() {
+    markerInfo.style.display="none"
+}
+
+function getMarkerData(markerId) {
+    fetch(`/map/marker/${markerId}`)
+    markerInfo.style.display="inline"
+}
 
 function initMap() {
     var options = {
@@ -22,10 +32,10 @@ function initMap() {
         } )
 
 
-    let infowindow = new google.maps.InfoWindow();
+    let infoWindow = new google.maps.InfoWindow();
     let hoverInfoWindow = new google.maps.InfoWindow();
 
-    const addMarker = ( data ) => {
+    function addMarker( data ) {
 
         const name = "data.name"
         const type = "data.type"
@@ -57,23 +67,28 @@ function initMap() {
 
         } )
         hoverWindow( marker, hoverInfoWindow )
+        clickWindow( marker, infoWindow )
 
-        marker.addListener( 'click', _ => {
-            infowindow.open( map, marker )
-            infowindow.setContent(
-                `<h3>${"Marker Name"}</h3>
-                <p>marker type</p>
-                ${moreInfoButton(marker)}
-                ${directionsButton(marker)} 
-                `
-            )
-        } )
+
         //add marker to list of markers
         allMarkers.push( marker )
     }
 }
 
 //SECTION Marker config
+
+function clickWindow( marker, infoWindow ) {
+            marker.addListener( 'click', _ => {
+            infoWindow.open( map, marker )
+            infoWindow.setContent(
+                `<h3>${"Marker Name"}</h3>
+                <p>marker type</p> 
+                ${moreInfoButton(marker)}
+                ${directionsButton(marker)} 
+                `
+            )
+        } )
+}
 
 function hoverWindow( marker, hoverInfoWindow ) {
 
@@ -110,9 +125,11 @@ function iconSelector( type ) {
 //!SECTION
 
 function moreInfoButton( marker ) {
+    const markerId = marker.title // marker.id
+
     return (
         `
-        <div title="more Information" onclick="frame()" class="markerButton" style="background:teal;">+</div>
+        <div title="more Information" onclick="getMarkerData('${markerId}')" class="markerButton" style="background:teal;">+</div>
         `
     )
 }
