@@ -62,7 +62,16 @@ router.get( '/map', function ( req, res, next ) {
   } );
 } );
 
-router.get( '/contact', function ( req, res, next ) {
+router.get( '/map/iframe', function ( req, res, next ) {
+  let center = req.params.center
+  res.render( 'frame', {
+    title: center,
+  } );
+} );
+
+
+
+router.get( '/contact', function ( req, res, next ) {;
   res.render( 'contact', {
     title: 'Contact'
   } );

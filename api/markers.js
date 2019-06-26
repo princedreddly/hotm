@@ -35,14 +35,14 @@ function GetMapMarkers() {
         return markers;
     });
     
-});
+}); 
 
 //console.log(collection)
 
 
 }
 
-
+GetMapMarkers()
 
 router.get('/', (req, res) => {
     res.send('markers');

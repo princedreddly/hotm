@@ -14,5 +14,34 @@
     <a href="/admin/surveys/125972979">APP/E-TOOLS MAPPING</a>
     <br>
     <a href="/admin/surveys/125970006">STAKEHOLDERS MAPPING</a>
+    <br>     
+    <input type="button" value="Update db" onclick="alertUpdate()">
+    <input type="button" value="Show db" onclick="alertList()">
+    <br>
+    <br>
+    <fieldset>
+        <legend>Output</legend>
+        <ul>
+
+        </ul>
+    </fieldset>
+
+
+
+    <script>
+    
+    function alertUpdate() {
+        alert("Update")
+    }   
+    function alertList() {
+        const list = document.querySelector("ul")
+
+        fetch('/api2/markers')
+        .then(res=>res.json())
+        .then(data=>console.log(data))
+
+
+    }
+    </script>
 </body>
 </html>

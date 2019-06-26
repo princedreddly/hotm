@@ -37,8 +37,6 @@ let surveys = [ {
 module.exports = function getSurvey(id){
 
     id = "125970006"
-
-  
         return (api.getSurveyDetails({"id":`${id}`},function (error, data) {
             console.log(id)
             if (error)
