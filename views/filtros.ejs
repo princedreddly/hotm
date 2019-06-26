@@ -1,16 +1,12 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="filtrostyle.css">  <title>Document</title>
-</head>
-<body>
+      <div style="padding-left: 44px;">
+        <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()" style= "top: 20px; position: absolute; left: 20px;"><svg viewBox="0 0 24 24" width="35px" height="35px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon" focusable="false"><path d="M15,2V4H6.72A2,2,0,0,1,3.28,4H1V2H3.28A2,2,0,0,1,6.72,2H15ZM11,6A2,2,0,0,0,9.28,7H1V9H9.28a2,2,0,0,0,3.45,0H15V7H12.72A2,2,0,0,0,11,6ZM5,11a2,2,0,0,0-1.72,1H1v2H3.28a2,2,0,0,0,3.45,0H15V12H6.72A2,2,0,0,0,5,11Z" style= "fill-opacity: 1"></path></svg></span>
+      </div>
+      
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+ 
         <ul>
             <h2>services</h2>
             <li><input type="checkbox" name="services" value="Salud" />Salud</li>
@@ -167,7 +163,9 @@
                       </li>
       </div>
       
-      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+     
+     
+      
       
       <script>
 
@@ -197,7 +195,6 @@ function myFunction() {
       }
       </script>
   
-</body>
-</html>
+
 
 
