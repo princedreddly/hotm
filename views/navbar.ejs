@@ -1,13 +1,14 @@
 
 
 <div class="navbar1">	
+ <img src="./public/media/croppedlogo.png" alt="">
 	<div class="item4">
 		<%- include("filtros") %>
   </div>
   
-	<a class="item6" href="/tutorial">COMO USAR</a>
-	<a class="item7" href="#">AGREGA UN CENTRO</a>
-	<a class="item8" href="/contact">CONTACTO</a>
+	<a class="item6" style="text-decoration:none;" href="/tutorial">COMO USAR</a>
+	<a class="item7" style="text-decoration:none;" href="#">AGREGA UN CENTRO</a>
+	<a class="item8" style="text-decoration:none;" href="/contact">CONTACTO</a>
 </div>
 <style>
 
@@ -23,27 +24,40 @@
     align-items: start;
   }
 
-  a{
-	
-  }
-
   .item4{
-	  grid-area: a;
-	  justify-self: start;
+	  grid-area: a b;
+    justify-self: start;
+    z-index: 1;
+    padding-top: 5em;
 
   }
   .item5{
 	grid-area: b;
-	align-self: start;
+  align-self: start;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgba(0, 255, 255, 0.829);
+  font-weight: bold;
+  
   }
   .item6{
     grid-area: c;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(0, 255, 255, 0.829);
+    font-style: initial;
+    font-weight: bold;
+   
   }
   .item7{
     grid-area: d;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(0, 255, 255, 0.829);
+    font-weight: bold;
   }
   .item8{
     grid-area: e;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(0, 255, 255, 0.829);
+    font-weight: bold;
   }
 
 </style>
