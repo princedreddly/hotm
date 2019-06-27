@@ -13,17 +13,18 @@ li{
 }
 
 .sidenav {
-  height: 100%;
+  
   width: 0;
   position: absolute;
   z-index: 1;
-  top: 0;
+  top: 40px;
   left: 0;
   background-color:#d2edf6;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
   overflow-y: auto;
+  height: 72%;
   
 }
 
