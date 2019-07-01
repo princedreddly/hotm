@@ -17,9 +17,12 @@
 			<%- include("navbartutorial") %>
             <div class="arrow animated infite fadeInDown"><span>&#8595;</span>
 
-            <div style="background-color:#d2edf6;"><p style="font-size:20%; color: grey">Utiliza los filtros para que tu búsqueda sea específica: <br> selecciona la ubicación geográfica, si quieres buscar centros de salud, de vivienda, etc</p></div>
+            <div style="background-color:#d2edf6;border-radius:12px;"><p class="parrafo">Utiliza los filtros para que tu búsqueda sea específica: <br> selecciona la ubicación geográfica, si quieres buscar centros de salud, de vivienda, etc</p></div>
             </div>
-          
+			<div class="arrow1 animated infite fadeInDown"><span>&#8595;</span>
+
+				<div style="background-color:#d2edf6;border-radius: 12px;"><p class="parrafo">Si deseas subir información sobre algún centro de atención, presiona en "Agrega tu centro" y completa el formulario</p></div>
+				</div>
 			<div id="map"/>
         </div>
        
@@ -37,9 +40,21 @@
     .arrow{
         position:absolute;
         z-index: 1;
-        
+        padding-top: 2%
+	
     }
-
-    
+    .arrow1{
+		position:absolute;
+        z-index: 1;
+		padding-left: 76%;
+		font-size: 80px;
+		padding-right: 3%;
+	}
+    .parrafo{
+	font-size:23%;
+	background-color: aquamarine;
+	color: black;
+	border-radius: 12px;
+	}
     </style>
 </html>
