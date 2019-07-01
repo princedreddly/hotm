@@ -14,8 +14,6 @@ const getMark = require('./api/mongoDB');
 const markerDataHandler = require('./routes/markerData')
 
 
-
-
 const app = express();
 
 // view engine setup

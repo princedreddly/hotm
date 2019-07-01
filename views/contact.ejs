@@ -6,13 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+  .b-map{
+    margin-left: 2em;
+    margin-top: 1em;
+  }
    .container {
   border-radius: 5px;
   background-color:#d2edf6;
   padding: 20px;
   width: 50em;
-  margin-left: 28em;
-  margin-top: 6em;
+  margin-left: 23.5em;
+  margin-top: 3em;
 }
 
 input[type=text], select, textarea {
@@ -29,17 +33,67 @@ input[type=text], select, textarea {
 h2{
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
-    padding-left: 39%;
+    padding-left: 35%;
     justify-content: center;
-    padding-left: 27%;
-    margin-top: 15%;
+    padding-left: 17%;
+    margin-top: 5%;
 
 }
+@media screen and (max-width:1412px){
+  .container{
+    margin-left: 23em;
+    width: 35em;
+  } 
+}
+@media screen and (max-width:1300px){
+  .container{
+    margin-left: 25em;
+    width: 35em;
+  }
+}
 
+@media screen and (max-width:1200px){
+  .container{
+    margin-left: 20em;
+    width: 30em;
+  }    
+}
+
+@media screen and (max-width:920px){
+  .container{
+    margin-left: 10em;
+    width: 30em;
+  } 
+}
+@media screen and (max-width:740px){
+  .container{
+    margin-left: 10em;
+    width: 20em;
+  } 
+}
+@media screen and (max-width:555px){
+  .container{
+    margin-left: 5em;
+    width: 20em;
+  } 
+}
+
+@media screen and (max-width:460px){
+  .container{
+    margin-left: 2em;
+    width: 15em;
+  } 
+}
+@media screen and (max-width:340px){
+  .container{
     
+    width: 12em;
+  } 
+}
     </style>
 </head>
 <body>
+  <a class="b-map" href="./map">Map</a>
    <h2>CONTACT WITH US</h2> 
         <div class="container">
             
@@ -55,7 +109,7 @@ h2{
                   <label for="subject">Comments</label>
                   <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
                   <input type="checkbox" name="privacy" id="privacy"> I agree to the <a href="http://www.healthonthemove.net/es/map/privacy-policy">privacy policy</a>
-                  <br>
+                  <br><br>
                   <input type="submit" value="Submit">
               
                 </form>
