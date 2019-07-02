@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+			<%- include("map") %>
 		<title><%= title %></title>
 		<link rel="stylesheet" href="/stylesheets/css/style.css" />
 		<link rel="stylesheet" href="/stylesheets/css/filtrostyle.css" />
@@ -11,11 +12,6 @@
 	<body>
 
 		
-
-	
-		<div id="#mapContainer">
-				
-			<%- include("navbartutorial") %>
             <div class="arrow animated infite fadeInDown"><span>&#8595;</span>
 
             <div style="background-color:#d2edf6;border-radius:12px;"><p class="parrafo">Utiliza los filtros para que tu búsqueda sea específica: <br> selecciona la ubicación geográfica, si quieres buscar centros de salud, de vivienda, etc</p></div>
@@ -24,20 +20,78 @@
 
 				<div style="background-color:#d2edf6;border-radius: 12px;"><p class="parrafo">Si deseas subir información sobre algún centro de atención, presiona en "Agrega tu centro" y completa el formulario</p></div>
 				</div>
-			<div id="map"/>
-        </div>
-       
-
 		
-
-		<script src="/javascripts/map/mainMap.js"></script>
+  
+	<script src="/javascripts/map/mainMap.js"></script>
 		<script
 			async
 			defer
-			src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
-   
+			src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>      
         </body>
     <style>
+
+.arrow{
+        color: aquamarine;
+        font-size: 100px;
+    }    
+
+    .arrow1{
+      color: aquamarine;
+      font-size: 80px;
+    }
+    .navbar1{
+        height: 40px;
+        display: grid;
+        grid-template-columns: repeat(20, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: 100px;
+        grid-template-areas: 
+        "a b b b b b b b b b b b c c c d d d e e e";  
+        align-items: start;
+      }
+    
+    
+      .item4{
+          grid-area: a;
+          justify-self: start;
+          padding-top: 35px;
+          z-index: 1;
+        
+
+    
+      }
+      .item5{
+        grid-area: b;
+        align-self: start;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgba(0, 255, 255, 0.829);
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: 1%;
+      }
+      .item6{
+        grid-area: c;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgba(0, 255, 255, 0.829);
+         font-weight: bold;
+         font-size: 18px;
+      }
+      .item7{
+        grid-area: d;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgba(0, 255, 255, 0.829);
+        font-weight: bold;
+        font-size: 18px;
+      }
+      .item8{
+        grid-area: e;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgba(0, 255, 255, 0.829);
+        font-weight: bold;
+        font-size: 18px;
+      }
+    
+   
     .arrow{
         position:absolute;
         z-index: 1;
