@@ -42,6 +42,7 @@ li{
   color: #f1f1f1;
 }
 
+
 .sidenav .closebtn {
   position: absolute;
   top: 0;
@@ -60,5 +61,11 @@ li{
   cursor:pointer; 
   width: 24%;
   margin-left: 17%;
-  margin-top: -14%;" onclick="openNav()
+  margin-top: -14%;
+}
+
+#mySearch{
+  margin-left:27%;
+  height: 30px;
+  width: 193px;
 }
