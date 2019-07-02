@@ -54,3 +54,11 @@ li{
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
+.filtersearch{
+  font-size:30px;
+  cursor:pointer; 
+  width: 24%;
+  margin-left: 17%;
+  margin-top: -14%;" onclick="openNav()
+}
