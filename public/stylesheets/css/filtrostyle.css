@@ -21,7 +21,7 @@ li{
   left: 0;
   background-color:#d2edf6;
   overflow-x: hidden;
-  transition: 0.5s;
+  transition: 0.5s; 
   padding-top: 60px;
   overflow-y: auto;
   height: 72%;
