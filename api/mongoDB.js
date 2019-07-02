@@ -6,15 +6,17 @@ const client = new MongoClient(uri, {
   useNewUrlParser: true
 });
 // query only verified centers
-const query = {};
+const query = {}
 // marker data necessary for map
-const fields = {
+const fields = {}
+
+  /*
   "_id": 0,
   "lat": 1,
   "lng": 1,
   "pais": 1,
 };
-
+*/
 let markers;
 
 var collection = client.connect(async function (err) {
