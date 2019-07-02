@@ -83,3 +83,10 @@ router.get( '/tutorial', function ( req, res, next ) {
   } );
 } );
 module.exports = router;
+
+router.get( '/map', function ( req, res, next ) {
+  res.render( 'map', {
+    title: 'Map'
+  } );
+} );
+module.exports = router;

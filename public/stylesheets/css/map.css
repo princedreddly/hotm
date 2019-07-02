@@ -27,3 +27,9 @@ body, html{
   height: 1000%;
   background-color: tomato;
 }
+
+.dropbtnHeader{
+ background: none;
+ color: #777; 
+ text-decoration: none;
+}
