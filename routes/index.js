@@ -82,11 +82,18 @@ router.get( '/tutorial', function ( req, res, next ) {
     title: 'Tutorial'
   } );
 } );
-module.exports = router;
+
 
 router.get( '/map', function ( req, res, next ) {
   res.render( 'map', {
     title: 'Map'
+  } );
+} );
+
+
+router.get( '/agregatucentro', function ( req, res, next ) {
+  res.render( 'agregatucentro', {
+    title: 'agregatucentro'
   } );
 } );
 module.exports = router;
