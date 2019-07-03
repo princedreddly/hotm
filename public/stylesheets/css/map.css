@@ -33,3 +33,7 @@ body, html{
  color: #777; 
  text-decoration: none;
 }
+
+.container{
+  display: flex;
+}
