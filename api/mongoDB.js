@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://admin:root@cluster0-clvxs.gcp.mongodb.net/test?retryWrites=true";
+const uri = "mongodb+srv://<username>:<password>@cluster0-clops.gpp.mongodb.net/test?retryWrites=true";
 const client = new MongoClient(uri, {
   useNewUrlParser: true
 });
